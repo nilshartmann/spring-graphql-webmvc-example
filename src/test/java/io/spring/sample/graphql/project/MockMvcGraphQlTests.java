@@ -22,6 +22,7 @@ import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMock
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.graphql.boot.test.tester.AutoConfigureGraphQlTester;
 import org.springframework.graphql.test.tester.GraphQlTester;
+import org.springframework.graphql.test.tester.WebGraphQlTester;
 import org.springframework.test.web.servlet.MockMvc;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -36,6 +37,9 @@ public class MockMvcGraphQlTests {
 
 	@Autowired
 	private GraphQlTester graphQlTester;
+
+	@Autowired
+  private WebGraphQlTester webGraphQlTester;
 
 	@Test
 	void jsonPath() {
